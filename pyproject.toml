@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cloudflarestatus"
+version = "0.0.2"
+authors = [
+    {name="Addy Yeow", email="ayeowch@gmail.com"},
+]
+description = "Parse Cloudflare System Status from https://www.cloudflarestatus.com"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Monitoring",
+    "Topic :: System :: Networking :: Monitoring",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ayeowch/cloudflarestatus"
+"Bug Tracker" = "https://github.com/ayeowch/cloudflarestatus/issues"
+
+[project.scripts]
+cloudflarestatus = "cloudflarestatus:main"
+
+[tool.hatch.build]
+only-include = [
+    "LICENSE",
+    "README.md",
+    "cloudflarestatus",
+]

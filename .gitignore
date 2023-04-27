@@ -1,0 +1,5 @@
+*.pyc
+.idea
+.pytest_cache
+dist
+venv
